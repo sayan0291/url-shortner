@@ -34,6 +34,7 @@ export const Navbar = () => {
           ))}
           <button className="ml-2 rounded-lg bg-slate-900 px-4 py-2 text-white transition-all hover:-translate-y-0.5 hover:bg-slate-800 active:translate-y-0">
             Sign in
+            {console.log("fix the github issue")}
           </button>
         </nav>
       </div>
