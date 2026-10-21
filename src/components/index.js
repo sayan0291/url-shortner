@@ -1,1 +1,1 @@
-export { Navbar } from "./layouts/NavBar";
+export { Navbar } from "./share/NavBar";

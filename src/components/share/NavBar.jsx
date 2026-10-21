@@ -1,3 +1,11 @@
+import { NavLink } from "react-router-dom";
+
+const navBtn = [
+  { id:1,name:"Dashboard" ,to:"/dashboard" },
+  { id:2,name:"Links" ,to:"/links" },
+  { id:3,name:"Docs" ,to:"/docs" }
+]
+
 export const Navbar = () => {
   return (
     <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
@@ -15,14 +23,14 @@ export const Navbar = () => {
         </a>
 
         <nav className="flex items-center gap-1 text-sm font-medium text-slate-600">
-          {["Dashboard", "Links", "Docs"].map((item) => (
-            <a
-              key={item}
-              href="#"
+          {navBtn.map((item) => (
+            <NavLink
+              key={item.id}
+              to={item.to}
               className="rounded-lg px-3 py-2 transition-colors hover:bg-slate-100 hover:text-slate-900"
             >
-              {item}
-            </a>
+              {item.name}
+            </NavLink>
           ))}
           <button className="ml-2 rounded-lg bg-slate-900 px-4 py-2 text-white transition-all hover:-translate-y-0.5 hover:bg-slate-800 active:translate-y-0">
             Sign in
