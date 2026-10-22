@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Navbar } from "./components";
-import { ShortenForm,StatsCards,LinkList,AnalyticsPanel } from "./features"
+import { ShortenForm,StatsCards,LinkList,AnalyticsPanel } from "../features"
 
 // ---------- MOCK DATA (delete when your backend is ready) ----------
 const mockStats = [
@@ -29,7 +28,7 @@ const mockAnalytics = {
   ],
 };
 
-export default function App() {
+export const DashBoard = () => {
   const [url, setUrl] = useState("");
   const [selectedId, setSelectedId] = useState(1);
   const [copiedId, setCopiedId] = useState(null);
@@ -44,8 +43,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50/60 via-white to-white">
-      <Navbar />
-
       <main className="mx-auto max-w-5xl space-y-12 px-4 py-12">
         <ShortenForm
           value={url}
