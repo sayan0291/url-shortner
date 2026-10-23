@@ -217,7 +217,7 @@ export const LinksPage = ({
       )}
 
       <p className="mt-4 text-center text-sm tabular-nums text-slate-400">
-        Showing {links.length} of {total} links
+        Showing {links.length} of {total} links {console.log("hello world")}
       </p>
     </section>
   );
