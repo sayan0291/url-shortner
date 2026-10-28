@@ -42,8 +42,8 @@ export const DashBoard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-50/60 via-white to-white">
-      <main className="mx-auto max-w-5xl space-y-12 px-4 py-12">
+    <div className="dashboard-page">
+      <main className="dashboard-content">
         <ShortenForm
           value={url}
           onChange={(e) => setUrl(e.target.value)}
@@ -52,9 +52,9 @@ export const DashBoard = () => {
 
         <StatsCards stats={mockStats} />
 
-        <div className="grid gap-8 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <h2 className="mb-4 text-lg font-bold text-slate-900">Your links</h2>
+        <div className="dashboard-grid">
+          <div className="dashboard-links-column">
+            <h2 className="dashboard-section-title">Your links</h2>
             <LinkList
               links={mockLinks}
               selectedId={selectedId}
@@ -64,7 +64,7 @@ export const DashBoard = () => {
             />
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="dashboard-analytics-column">
             {/* key= makes the panel re-run its animations when you switch links */}
             <AnalyticsPanel
               key={selectedId + range}
@@ -78,4 +78,4 @@ export const DashBoard = () => {
       </main>
     </div>
   );
-}
+} 
